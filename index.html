@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Mahabali Event’s is Kota’s premier luxury event studio specializing in bespoke weddings, high-end corporate events, and signature decor in Rajasthan. Book your grand celebration today.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahabali Event’s | Best Luxury Wedding & Event Planner in Kota</title>    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="logo.png">
+    <meta name="google-site-verification" content="google2fca8d064f908b22" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EventVenue",
+  "name": "Mahabali Event’s",
+  "description": "Kota's Premier Luxury Event Studio specializing in high-end weddings and corporate events.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kota",
+    "addressRegion": "Rajasthan",
+    "addressCountry": "IN"
+  },
+  "url": "https://yourwebsite.com",
+  "telephone": "+91-YOUR-PHONE-NUMBER",
+  "priceRange": "₹₹₹"
+}
+</script>
+
+
+    <style>
+        :root {
+            --logo-blue: #A5D8FF;
+            --deep-black: #050505;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--deep-black); color: white; overflow-x: hidden; }
+        .serif { font-family: 'Cormorant Garamond', serif; }
+        .text-logo-blue { color: var(--logo-blue); }
+        .bg-logo-blue { background-color: var(--logo-blue); }
+        .border-logo-blue { border-color: var(--logo-blue); }
+        
+        /* Starry Animation Background */
+        .stars-bg {
+            background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                              radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px);
+            background-size: 550px 550px, 350px 350px;
+            background-position: 0 0, 40px 60px;
+            animation: stars 60s linear infinite;
+        }
+        @keyframes stars {
+            from { background-position: 0 0, 40px 60px; }
+            to { background-position: 550px 550px, 390px 410px; }
+        }
+        
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-overlay { background: linear-gradient(0deg, var(--deep-black) 0%, transparent 100%); }
+    </style>
+</head>
+<body>
+<!-- WhatsApp Button -->
+<a href="https://wa.me/918955594942"
+   target="_blank"
+   class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600
+          text-white rounded-full p-4 shadow-lg
+          flex items-center justify-center z-50">
+  
+  <!-- WhatsApp Icon (SVG) -->
+  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+       viewBox="0 0 24 24" class="w-6 h-6">
+    <path d="M12 2C6.48 2 2 6.28 2 11.56c0 2.05.67 3.96 1.82 5.54L2 22l5.1-1.66c1.53.83 3.27 1.3 5.1 1.3 5.52 0 10-4.28 10-9.56S17.52 2 12 2z"/>
+  </svg>
+</a>
+
+<!-- Navigation -->
+<nav class="fixed w-full z-[100] px-6 py-4 transition-all duration-300 bg-black/80 backdrop-blur-lg border-b border-white/5">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo Section -->
+        <div class="flex items-center gap-3">
+            <img src="logo.png" alt="Mahabali Logo" class="w-12 md:w-16 object-contain">
+            <h1 class="serif text-xl md:text-2xl font-bold tracking-widest  uppercase">
+                MAHABALI <span class="text-[#A5D8FF]">EVENT'S KOTA</span>
+            </h1>
+        </div>
+
+        <!-- Desktop Menu (Hidden on Mobile) -->
+        <div class="hidden lg:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.2em]">
+            <a href="#home" class="hover:text-[#A5D8FF] transition">Home</a>
+            <a href="#about" class="hover:text-[#A5D8FF] transition">Our Story</a>
+            <a href="#services" class="hover:text-[#A5D8FF] transition">Services</a>
+            <a href="#process" class="hover:text-[#A5D8FF] transition">Process</a>
+            <a href="#gallery" class="hover:text-[#A5D8FF] transition">Portfolio</a>
+            <a href="https://wa.me/918955594942" class="text-[#A5D8FF] border border-[#A5D8FF]/30 px-4 py-2 rounded-full hover:bg-[#A5D8FF] hover:text-black transition">Book Event</a>
+        </div>
+
+        <!-- Mobile Toggler Button -->
+        <button id="menu-btn" class="lg:hidden text-white focus:outline-none">
+            <i id="menu-icon" class="fa-solid fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Menu Overlay (Initially Hidden) -->
+    <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-xl border-b border-white/10 transition-all duration-300">
+        <div class="flex flex-col items-center py-8 space-y-6 text-[12px] font-bold uppercase tracking-[0.3em]">
+            <a href="#home" class="mobile-link hover:text-[#A5D8FF]">Home</a>
+            <a href="#about" class="mobile-link hover:text-[#A5D8FF]">Our Story</a>
+            <a href="#services" class="mobile-link hover:text-[#A5D8FF]">Services</a>
+            <a href="#process" class="mobile-link hover:text-[#A5D8FF]">Process</a>
+            <a href="#gallery" class="mobile-link hover:text-[#A5D8FF]">Portfolio</a>
+            <a href="#contact" class="mobile-link text-[#A5D8FF] pt-4">Book Event</a>
+        </div>
+    </div>
+</nav>
+
+<!-- JavaScript for Mobile Menu Toggler -->
+<script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('menu-icon');
+    const links = document.querySelectorAll('.mobile-link');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        
+        if (menu.classList.contains('hidden')) {
+            icon.classList.replace('fa-xmark', 'fa-bars');
+        } else {
+            icon.classList.replace('fa-bars', 'fa-xmark');
+        }
+    });
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.add('hidden');
+            icon.classList.replace('fa-xmark', 'fa-bars');
+        });
+    });
+
+</script>
+    
+
+
+   
+
+    <!-- 2. HERO SECTION (GRAND) -->
+    <section id="home" class="relative h-screen w-full flex items-center justify-center overflow-hidden stars-bg">
+        <div class="absolute inset-0 z-0">
+            <img src="images/dob.jpg" 
+                 class="w-full h-full object-cover opacity-30" alt="Mahabali Event’s - Premier Luxury Event Studio Kota Logo">
+            <div class="absolute inset-0 gradient-overlay"></div>
+        </div>
+        
+        <div class="relative z-10  text-center mt-16  px-4 max-w-5xl">
+            <h2 class="serif text-5xl md:text-9xl font-bold mt-16 leading-none  tracking-tighter">
+                WE MAKE, YOUR<br>
+                <span class="relative inline-block mt-4">
+                    IMAGINATION...
+                    <svg class="absolute -bottom-4 left-0 w-full" viewBox="0 0 500 20" fill="none"><path d="M1 15C150 5 350 5 499 15" stroke="#A5D8FF" stroke-width="3"/></svg>
+                </span>
+            </h2>
+            <p class="text-gray-400 text-sm md:text-lg mt-4 max-w-2xl mx-auto mb-10 font-light tracking-wide leading-relaxed">
+                From Royal Rajasthan Weddings to High-Tech Corporate Summits. We don't just plan events; we design lifetime memories with precision and soul.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#contact" class="bg-logo-blue text-black px-10 py-4 rounded-full font-bold uppercase text-xs tracking-[0.2em] hover:scale-105 transition shadow-lg shadow-blue-400/20">Start Planning</a>
+                <a href="#gallery" class="border border-white/20 px-10 py-4 rounded-full font-bold uppercase text-xs tracking-[0.2em] hover:bg-white/10 transition">View Portfolio</a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+            <i class="fa-solid fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- 3. STATS SECTION (TRUST) -->
+    <section class="py-20 bg-black border-y border-white/5">
+        <div class="container mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+            <div>
+                <p class="serif text-5xl text-logo-blue font-bold mb-2">500+</p>
+                <p class="text-gray-500 uppercase text-[10px] tracking-widest">Events Managed</p>
+            </div>
+            <div>
+                <p class="serif text-5xl text-logo-blue font-bold mb-2">10+</p>
+                <p class="text-gray-500 uppercase text-[10px] tracking-widest">Years Experience</p>
+            </div>
+            <div>
+                <p class="serif text-5xl text-logo-blue font-bold mb-2">12</p>
+                <p class="text-gray-500 uppercase text-[10px] tracking-widest">Kota Venues Partner</p>
+            </div>
+            <div>
+                <p class="serif text-5xl text-logo-blue font-bold mb-2">100%</p>
+                <p class="text-gray-500 uppercase text-[10px] tracking-widest">Client Smiles</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ABOUT SECTION (DETAILED) -->
+    <section id="about" class="py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+            <div class="relative">
+                <div class="absolute -top-10 -left-10 w-40 h-40 border-l border-t border-logo-blue opacity-30"></div>
+                <img src="images/haldi.JPG" 
+                     class="rounded-3xl shadow-2xl z-10 relative grayscale hover:grayscale-0 transition duration-700">
+                <div class="absolute -bottom-10 -right-10 bg-logo-blue text-black p-8 rounded-2xl z-20 hidden md:block">
+                    <p class="serif text-3xl font-bold leading-tight">Since 2026,<br>Defining Luxury in Kota.</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-logo-blue font-bold text-xs uppercase tracking-[0.3em] mb-4">The Mahabali Story</h4>
+                <h3 class="serif text-5xl mb-8 leading-tight">We Believe Perfection Is In The Details.</h3>
+                <p class="text-gray-400 leading-loose mb-8">
+                    Founded with a passion for grand storytelling, Mahabali Event's has become Kota's most sought-after event management firm. We specialize in transforming venues into dreamscapes. Whether it's a grand wedding at Umed Bhawan or a corporate launch in the heart of Gumanpura, we bring the same level of intensity and class.
+                </p>
+                <div class="space-y-4 mb-10">
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-check text-logo-blue mt-1"></i>
+                        <p class="text-sm font-semibold uppercase tracking-wider">Expert Vendor Coordination</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-check text-logo-blue mt-1"></i>
+                        <p class="text-sm font-semibold uppercase tracking-wider">Bespoke Theme Decoration</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-check text-logo-blue mt-1"></i>
+                        <p class="text-sm font-semibold uppercase tracking-wider">Seamless Logistics & Guest Hospitality</p>
+                    </div>
+                </div>
+                <button class="group flex items-center gap-4 text-logo-blue font-bold uppercase text-xs tracking-[0.2em]">
+                    Read Our Full Journey <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+<section id="gallery" class="py-24 bg-black relative overflow-hidden">
+    <!-- Background Decor -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-blue-900/10 blur-[120px] rounded-full"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-900/10 blur-[120px] rounded-full"></div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <h4 class="text-[#A5D8FF] font-bold text-xs uppercase tracking-[0.3em] mb-4">Our Masterpieces</h4>
+            <h3 class="serif text-5xl md:text-6xl mb-6">Captured <span class="italic">Memories</span></h3>
+            <div class="w-24 h-1 bg-[#A5D8FF] mx-auto"></div>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12 text-[10px] font-bold uppercase tracking-widest">
+            <button onclick="filterGallery('all')" class="filter-btn active-filter px-6 py-2 border border-[#A5D8FF] text-[#A5D8FF] rounded-full transition">All Works</button>
+            <button onclick="filterGallery('wedding')" class="filter-btn px-6 py-2 border border-white/10 text-gray-400 rounded-full hover:border-[#A5D8FF] transition">Weddings</button>
+            <button onclick="filterGallery('decor')" class="filter-btn px-6 py-2 border border-white/10 text-gray-400 rounded-full hover:border-[#A5D8FF] transition">Decor</button>
+            <button onclick="filterGallery('corporate')" class="filter-btn px-6 py-2 border border-white/10 text-gray-400 rounded-full hover:border-[#A5D8FF] transition">Corporate</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Item 1 (Wedding) -->
+            <div class="gallery-item wedding relative group overflow-hidden rounded-3xl h-[450px]">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" 
+                     class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Luxury wedding stage decoration in Kota by Mahabali Event’s">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <span class="text-[#A5D8FF] text-xs font-bold uppercase tracking-widest mb-2">Royal Wedding</span>
+                    <h5 class="serif text-2xl text-white">The Palace Grande</h5>
+                </div>
+            </div>
+
+            <!-- Item 2 (Decor) -->
+            <div class="gallery-item decor relative group overflow-hidden rounded-3xl h-[350px] md:mt-12">
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" 
+                     class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <span class="text-[#A5D8FF] text-xs font-bold uppercase tracking-widest mb-2">Floral Decor</span>
+                    <h5 class="serif text-2xl text-white">Midnight Bloom Theme</h5>
+                </div>
+            </div>
+
+            <!-- Item 3 (Corporate) -->
+            <div class="gallery-item corporate relative group overflow-hidden rounded-3xl h-[450px]">
+                <img src="images/sk.JPG" 
+                     alt="High-end corporate event management in Kota Rajasthan" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <span class="text-[#A5D8FF] text-xs font-bold uppercase tracking-widest mb-2">Corporate</span>
+                    <h5 class="serif text-2xl text-white">Tech Summit 2023</h5>
+                </div>
+            </div>
+
+            <!-- Item 4 (Wedding) -->
+            <div class="gallery-item wedding relative group overflow-hidden rounded-3xl h-[400px]">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" 
+                     class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <span class="text-[#A5D8FF] text-xs font-bold uppercase tracking-widest mb-2">Wedding</span>
+                    <h5 class="serif text-2xl text-white">Mandap Excellence</h5>
+                </div>
+            </div>
+
+            <!-- Item 5 (Decor) -->
+            <div class="gallery-item decor relative group overflow-hidden rounded-3xl h-[450px] md:-mt-24">
+                <img src="https://images.unsplash.com/photo-1478147427282-58a87a120781?auto=format&fit=crop&w=800&q=80" 
+                     class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <span class="text-[#A5D8FF] text-xs font-bold uppercase tracking-widest mb-2">Lighting</span>
+                    <h5 class="serif text-2xl text-white">Neon Dream Party</h5>
+                </div>
+            </div>
+
+            <!-- Item 6 (Wedding) -->
+            <div class="gallery-item wedding relative group overflow-hidden rounded-3xl h-[350px]">
+                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=800&q=80" 
+                     class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <span class="text-[#A5D8FF] text-xs font-bold uppercase tracking-widest mb-2">Wedding</span>
+                    <h5 class="serif text-2xl text-white">Bridal Entry</h5>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- View More Button -->
+        <div class="text-center mt-20">
+            <button class="px-12 py-4 border border-white/20 rounded-full hover:bg-white hover:text-black transition duration-500 uppercase text-[10px] font-bold tracking-[0.3em]">
+                Explore Full Gallery
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Script -->
+<script>
+    function filterGallery(category) {
+        const items = document.querySelectorAll('.gallery-item');
+        const buttons = document.querySelectorAll('.filter-btn');
+
+        // Update Buttons Style
+        buttons.forEach(btn => {
+            btn.classList.remove('active-filter', 'border-[#A5D8FF]', 'text-[#A5D8FF]');
+            btn.classList.add('border-white/10', 'text-gray-400');
+        });
+        event.target.classList.add('active-filter', 'border-[#A5D8FF]', 'text-[#A5D8FF]');
+        event.target.classList.remove('border-white/10', 'text-gray-400');
+
+        // Filter Items
+        items.forEach(item => {
+            if (category === 'all' || item.classList.contains(category)) {
+                item.style.display = 'block';
+                setTimeout(() => item.style.opacity = '1', 10);
+            } else {
+                item.style.opacity = '0';
+                setTimeout(() => item.style.display = 'none', 300);
+            }
+        });
+    }
+</script>
+
+<style>
+    .active-filter {
+        border-color: #A5D8FF !important;
+        color: #A5D8FF !important;
+    }
+    .gallery-item {
+        transition: all 0.5s ease;
+    }
+</style>
+
+<!-- About Founder Section -->
+<section class="py-24 bg-black text-white overflow-hidden">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+            
+            <!-- Image Column: Founder's Portrait -->
+            <div class="w-full lg:w-1/2 relative">
+                <div class="relative z-10 border border-white/10 p-3 bg-neutral-900/50">
+                    <img src="images/img.jfif" alt="[Founder Name] - Visionary Behind Mahabali Event’s Kota" class="w-full grayscale hover:grayscale-0 transition duration-700 ease-in-out object-cover aspect-[4/5]">
+                </div>
+                <!-- Decorative Element -->
+                <div class="absolute -bottom-6 -right-6 w-48 h-48 border-r border-b border-logo-blue/30 -z-0"></div>
+            </div>
+
+            <!-- Text Column: The Visionary -->
+            <div class="w-full lg:w-1/2">
+                <h2 class="text-logo-blue uppercase tracking-[0.2em] text-sm mb-4 font-semibold">The Visionary</h2>
+                <h3 class="serif text-4xl lg:text-5xl mb-8 leading-tight">
+                    Crafting Grandeur with <br> 
+                    <span class="italic text-gray-400">Pintu</span>
+                </h3>
+                
+                <div class="space-y-6 text-gray-400 leading-relaxed font-light">
+                    <p>
+                        With over a decade of experience in the luxury hospitality and events sector, <strong>Pintu</strong> established Mahabali Event’s to redefine the standards of celebrations in Kota. His vision was simple: to blend traditional Rajasthani royal hospitality with modern, bespoke event design.
+                    </p>
+                    <p>
+                        Under his leadership, Mahabali Event’s has evolved into <strong>Kota’s Premier Luxury Event Studio</strong>, known for its meticulous attention to detail and ability to transform ordinary spaces into ethereal experiences. 
+                    </p>
+                    <p class="italic border-l-2 border-logo-blue pl-6 py-2">
+                        "Luxury is not about price; it’s about the seamless execution of a dream. At Mahabali, we don’t just plan events—we curate legacies."
+                    </p>
+                </div>
+
+                <!-- Founder Signature/Social -->
+                <div class="mt-10 pt-10 border-t border-white/5 flex items-center gap-6">
+                    <div>
+                        <p class="serif text-2xl mb-1 text-white">Pintu</p>
+                        <p class="text-logo-blue text-[10px] uppercase tracking-widest font-bold">Founder & Creative Director</p>
+                    </div>
+                   
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- 5. SERVICES SECTION (CARDS) -->
+    <section id="services" class="py-24 bg-zinc-950">
+        <div class="container mx-auto px-6 text-center mb-20">
+            <h3 class="serif text-6xl mb-4">Our Experiences</h3>
+            <p class="text-gray-500 tracking-widest uppercase text-xs font-bold">What we do best</p>
+        </div>
+        
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <!-- Service 1 -->
+            <div class="glass p-10 rounded-[2rem] hover:bg-white/5 transition duration-500 group">
+                <div class="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center mb-8 group-hover:bg-logo-blue group-hover:text-black transition duration-500">
+                    <i class="fa-solid fa-gem text-3xl"></i>
+                </div>
+                <h4 class="serif text-3xl mb-4">Wedding Planning</h4>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">From destination weddings in Rajasthan's palaces to elegant local ceremonies, we handle decor, catering, and rituals.</p>
+                <ul class="text-[10px] font-bold text-gray-500 space-y-2 uppercase tracking-widest">
+                    <li>• Venue Selection</li>
+                    <li>• Floral Design</li>
+                    <li>• Guest Management</li>
+                </ul>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="glass p-10 rounded-[2rem] hover:bg-white/5 transition duration-500 group">
+                <div class="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center mb-8 group-hover:bg-logo-blue group-hover:text-black transition duration-500">
+                    <i class="fa-solid fa-building text-3xl"></i>
+                </div>
+                <h4 class="serif text-3xl mb-4">Corporate Events</h4>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">Launch events, annual meets, and tech seminars with a professional and sleek atmosphere in Kota's business hubs.</p>
+                <ul class="text-[10px] font-bold text-gray-500 space-y-2 uppercase tracking-widest">
+                    <li>• Stage & AV Setup</li>
+                    <li>• Brand Branding</li>
+                    <li>• Artist Booking</li>
+                </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="glass p-10 rounded-[2rem] hover:bg-white/5 transition duration-500 group">
+                <div class="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center mb-8 group-hover:bg-logo-blue group-hover:text-black transition duration-500">
+                    <i class="fa-solid fa-champagne-glasses text-3xl"></i>
+                </div>
+                <h4 class="serif text-3xl mb-4">Social Parties</h4>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">Intimate birthdays, anniversaries, or grand festive celebrations. We add the sparkle to your personal milestones.</p>
+                <ul class="text-[10px] font-bold text-gray-500 space-y-2 uppercase tracking-widest">
+                    <li>• Theme Selection</li>
+                    <li>• Entertainment</li>
+                    <li>• Photography</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. THE PROCESS (STEP BY STEP) -->
+    <section id="process" class="py-24 bg-black overflow-hidden">
+        <div class="container mx-auto px-6">
+            <h3 class="serif text-4xl mb-16 text-center">How We Work</h3>
+            <div class="grid md:grid-cols-4 gap-4">
+                <div class="relative p-8 border-r border-white/10">
+                    <span class="serif text-7xl opacity-10 absolute top-4 left-4">01</span>
+                    <h5 class="serif text-xl mt-12 mb-4 text-logo-blue">The Concept</h5>
+                    <p class="text-xs text-gray-500 leading-relaxed">We listen to your imagination and sketch the first draft of your event.</p>
+                </div>
+                <div class="relative p-8 border-r border-white/10">
+                    <span class="serif text-7xl opacity-10 absolute top-4 left-4">02</span>
+                    <h5 class="serif text-xl mt-12 mb-4 text-logo-blue">Curation</h5>
+                    <p class="text-xs text-gray-500 leading-relaxed">Selecting the perfect venue in Kota and the best local & national vendors.</p>
+                </div>
+                <div class="relative p-8 border-r border-white/10">
+                    <span class="serif text-7xl opacity-10 absolute top-4 left-4">03</span>
+                    <h5 class="serif text-xl mt-12 mb-4 text-logo-blue">Execution</h5>
+                    <p class="text-xs text-gray-500 leading-relaxed">Our on-ground team builds the magic while you stay stress-free.</p>
+                </div>
+                <div class="relative p-8">
+                    <span class="serif text-7xl opacity-10 absolute top-4 left-4">04</span>
+                    <h5 class="serif text-xl mt-12 mb-4 text-logo-blue">The Big Day</h5>
+                    <p class="text-xs text-gray-500 leading-relaxed">Flawless delivery and a celebration that Kota will remember.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CONTACT SECTION (DETAILED) -->
+    <section id="contact" class="py-24 bg-zinc-950 relative">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-20">
+            <div>
+                <h3 class="serif text-6xl mb-8 leading-tight">Ready to plan your <br><span class="text-logo-blue">Grand Event?</span></h3>
+                <p class="text-gray-400 mb-12 leading-loose">Let's turn your imagination into a Mahabali celebration. Our team is ready to assist you in every detail.</p>
+                
+                <div class="space-y-8">
+                    <div class="flex items-center gap-6">
+                        <div class="w-12 h-12 glass rounded-full flex items-center justify-center text-logo-blue"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-gray-500">Call Us</p>
+                            <p class="font-bold">+91 8955594942</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <div class="w-12 h-12 glass rounded-full flex items-center justify-center text-logo-blue"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-gray-500">Visit Us</p>
+                            <p class="font-bold"> KOTA RAJASTHAN</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass p-10 rounded-[2.5rem]">
+               <form class="space-y-6" onsubmit="sendWhatsAppMessage(); return false;">
+    <div class="grid md:grid-cols-2 gap-6">
+        <input id="name" type="text" placeholder="Full Name"
+            class="bg-white/5 border border-white/10 p-4 rounded-xl outline-none w-full" required>
+
+        <input id="email" type="email" placeholder="Email Address"
+            class="bg-white/5 border border-white/10 p-4 rounded-xl outline-none w-full">
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+        <input id="phone" type="tel" placeholder="Phone No."
+            class="bg-white/5 border border-white/10 p-4 rounded-xl outline-none w-full" required>
+
+        <select id="service"
+            class="bg-white/5 border border-white/10 p-4 rounded-xl outline-none w-full text-gray-400">
+            <option>Wedding Inquiry</option>
+            <option>Corporate Event</option>
+            <option>Theme Party</option>
+        </select>
+    </div>
+
+    <textarea id="message" placeholder="Tell us about your dream..."
+        class="bg-white/5 border border-white/10 p-4 rounded-xl outline-none w-full h-32"></textarea>
+
+    <button
+        class="w-full bg-logo-blue text-black font-bold py-5 rounded-xl uppercase tracking-widest text-xs">
+        Send Inquiry
+    </button>
+</form>
+
+            </div>
+        </div>
+    </section>
+<script>
+function sendWhatsAppMessage() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let service = document.getElementById("service").value;
+    let message = document.getElementById("message").value;
+
+    let whatsappNumber = "918955594942"; // 👉 
+
+    let text =
+        `Hello Sir,%0A%0A` +
+        `Name: ${name}%0A` +
+        `Phone: ${phone}%0A` +
+        `Email: ${email}%0A` +
+        `Service: ${service}%0A%0A` +
+        `Message:%0A${message}`;
+
+    let url = `https://wa.me/${whatsappNumber}?text=${text}`;
+    window.open(url, "_blank");
+}
+</script>
+
+
+    <!-- 8. FOOTER -->
+    <footer class="py-12 bg-black border-t border-white/5">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <h4 class="serif text-2xl font-bold">MAHABALI <span class="text-logo-blue">EVENT'S</span></h4>
+                <p class="text-[10px] text-gray-600 uppercase tracking-widest mt-2">WE MAKE, YOUR IMAGINATION...</p>
+            </div>
+            <div class="flex gap-10 text-gray-400 text-[10px] font-bold uppercase tracking-widest">
+                <a href="https://www.instagram.com/mahabali_event_kota/" class="hover:text-logo-blue">Instagram</a>
+                <a href="https://wa.me/918955594942" class="hover:text-logo-blue">WhatsApp</a>
+            </div>
+            <p class="text-gray-600 text-[10px] tracking-widest">© 2026 DESIGNED FOR KOTA'S FINEST</p>
+        </div>
+    </footer>
+
+</body>
+</html>
